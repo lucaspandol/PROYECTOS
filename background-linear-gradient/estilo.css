@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay1{
+    /* Utilizamos la propiedad background con dos valores
+    1: linear gradient - para dar color a la capa(usamos rgba para color transparente 
+    2: url - para colocar la imagen*/
+    background: 
+        linear-gradient(rgba(232,39,197,.5),rgba(232,39,197,.5)),
+        url(img/fondo1.jpg);
+    background-size: cover;    
+}
+.overlay2{
+    /* Utilizamos la propiedad background con dos valores
+    1: linear gradient - para dar color a la capa(usamos rgba para color transparente 
+    2: url - para colocar la imagen*/
+    background: 
+        linear-gradient(to right, rgba(0,0,0,.9), transparent),
+        url(img/fondo2.jpg);
+    background-size: cover;    
+}
+.overlay3{
+    /* Utilizamos la propiedad background con dos valores
+    1: radial gradient - para dar color a la capa(usamos rgba para color transparente 
+    2: url - para colocar la imagen*/
+    background: 
+        radial-gradient(rgba(255,255,255,.5), rgba(0,0,0,1) 80%),
+        url(img/fondo3.jpg);
+    background-size: cover;    
+}
+h1{
+    font-size: 90px;
+    color: #fff;
+}

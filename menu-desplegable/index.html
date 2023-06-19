@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menú Desplegable</title>
+	<link rel="stylesheet" href="estilo.css">
+	<script>
+		// Función para cargar el contenido de los enlaces sin recargar la página
+		function cargarContenido(url) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", url, true);
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					document.getElementById("contenido").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
+	</script>
+</head>
+<body>
+	<nav>
+		<ul class="menu-horizontal">
+			<li><a href="#">Inicio</a></li>
+			<li>
+				<a href="#">Cursos</a>
+				<ul class="menu-vertical">
+					<li><a href="#" onclick="cargarContenido('curso-html.html')">Html</a></li>
+					<li><a href="#" onclick="cargarContenido('curso-css.html')">Css</a></li>
+					<li><a href="#" onclick="cargarContenido('curso-js.html')">Javascript</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Inscripción</a>
+				<ul class="menu-vertical">
+					<li><a href="#">Anual</a></li>
+					<li><a href="#">Mensual</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Contacto</a></li>
+		</ul>
+	</nav>
+
+	<div id="contenido">
+		<!-- Aquí se mostrará el contenido cargado -->
+	</div>
+</body>
+</html>
